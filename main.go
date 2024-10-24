@@ -1,9 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
 func main() {
-	for i := 1; i <= 100; i++ {
-		fmt.Println(i)
+	cmds := os.Args[1:]
+	for _, cmd := range cmds {
+		fmt.Printf("[%s]\n", cmd)
 	}
 }
